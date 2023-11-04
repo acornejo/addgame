@@ -1,0 +1,165 @@
+.footer {
+  padding-top: 300px;
+  text-align: right;
+  font-size: 10px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: gray;
+}
+
+.header {
+  height: 40px;
+  line-height: 40px;
+  background-image: url("images/coin.png");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: calc(50% - 50px) 50%;
+  font-size: 25px;
+  font-family: cursive;
+  font-weight: bold;
+  border-style: solid;
+  border-color: rgb(233, 233, 233);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.submit {
+  margin: auto;
+  margin-top: 50px;
+  background-image: url("images/click.png");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 153, 0, 0.05);
+  height: 120px;
+  width: 300px;
+  border-color: rgb(0, 134, 40);
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+#math-box {
+  text-align:right;
+  font-size: 50px;
+  font-family: monospace;
+}
+
+#success-status {
+  display:none;
+  margin-top: 100px;
+}
+
+#failure-status {
+  display:none;
+  margin-top: 100px;
+}
+
+svg {
+  width: 100px;
+  display: block;
+}
+
+.centeralign {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#op {
+  text-align: left;
+  height: 0.25em;
+  line-height: 0.25em;
+}
+
+#result > span.active {
+  border-width: 0.5px;
+  border-style: dotted;
+  border-color: rgba(128, 128, 128, 0.277);
+}
+
+#result > span.empty {
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(0, 126, 0, 0.5);
+}
+
+#result > span.active:hover,span.empty:hover {
+  background-color: aquamarine;
+}
+
+#carry {
+  height: 1em;
+  color: rgb(180, 180, 180);
+  letter-spacing: 1px;
+}
+
+#arg1, #arg2 {
+  letter-spacing: 1px;
+}
+
+.number-swiper, .number-swiper-column{
+  height: 3.5em;  /* column has to be the same hight as container for corect root margin*/
+}
+
+#swiper {
+  background-color: white;
+  display: none;
+}
+
+.number-swiper{
+  user-select: none;
+  display:flex;
+  font-size: 20vmin;
+  font-size: calc(9vmin + 9vmax);;
+  justify-content: center;
+  align-items: center;
+  /* transition: .2s; */
+  position: relative;
+}
+
+.number-swiper-column::-webkit-scrollbar { display:none }
+
+.number-swiper-column{
+  overflow: scroll;
+  scrollbar-width: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  scroll-snap-type: y mandatory;
+  -webkit-mask-image: linear-gradient(0deg, transparent 20%, black 40%, black 60%, transparent 100%);
+  mask-image: linear-gradient(0deg,  transparent 20%, black 40%, black 60%, transparent 100%);
+  transition:.2s;
+}
+
+.number-swiper-column-animating{
+  scroll-snap-type: none;
+}
+
+.number-swiper-column li{
+  /* nothing can be in em or % unites because that's changed by active and changes break scroll snap */
+  scroll-snap-align: center;
+  transition: .2s;
+  display: grid;
+  align-items: center;
+  text-align: center;
+
+  /* Fallbacks */
+  height: 22vmin;
+  width: 20vmin;
+  font-size: 20vmin;
+  line-height: 20vmin;
+  margin: .1vmin -.1vmin -.1vmin .1vmin;
+  height: calc(10vmin + 10vmax);
+  width: calc(8vmin + 8vmax);
+  font-size: calc(8vmin + 8vmax);
+  line-height: calc(8vmin + 8vmax);
+}
+
+.number-swiper-column li.number-swiper-active-number{
+  font-size: 28vmin;
+  font-size: calc(11vmin + 11vmax);
+}
