@@ -1,0 +1,20 @@
+{
+    "name": "AddGame",
+    "short_name": "AddGame",
+    "start_url": ".",
+    "display": "fullscreen",
+    "background_color": "#fff",
+    "description": "Adding app for toddlers.",
+    "icons": [
+        {
+          "src": "images/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "images/android-chrome-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+}
