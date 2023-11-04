@@ -118,8 +118,8 @@ window.onload = function () {
     let score_value = 0;
 
     setElementText(op, "+");
-    const arg1_value = generateNumber(4);
-    const arg2_value = generateNumber(4);
+    let arg1_value = generateNumber(4);
+    let arg2_value = generateNumber(4);
     setElementText(arg1, formatNumber(arg1_value));
     setElementText(arg2, formatNumber(arg2_value));
     renderResult(result, carry, result_value);
@@ -173,6 +173,10 @@ window.onload = function () {
             successStatus.style.display = 'block';
             score_value++;
             result_value.length = 0
+            arg1_value = generateNumber(4);
+            arg2_value = generateNumber(4);
+            setElementText(arg1, formatNumber(arg1_value));
+            setElementText(arg2, formatNumber(arg2_value));
             renderResult(result, carry, result_value);
             setElementText(score, score_value.toString());
         } else {
